@@ -6,7 +6,7 @@ import { useCharacters } from '../hooks/useCharacters';
 
 export default function CharactersList() {
     const { error, loading, data } = useCharacters();
-    console.log(loading, error, data);
+    // console.log(loading, error, data);
     if (loading) return <Loading />
     if (error) return <Error />
     return (

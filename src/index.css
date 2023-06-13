@@ -1,3 +1,16 @@
 .App {
-  margin: 4rem 0 0 4rem;
+  margin: 1% 5%;
+}
+
+.logo {
+  text-align: center;
+  font-family: sans-serif;
+  color: rgb(218, 212, 104);
+  margin-bottom: 3rem;
+}
+
+.characterList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
