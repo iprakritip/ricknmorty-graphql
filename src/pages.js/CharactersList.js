@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Character from '../components/Character';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
@@ -10,6 +11,11 @@ export default function CharactersList() {
     if (loading) return <Loading />
     if (error) return <Error />
     return (
-        <Character characters={data?.characters.results} />
+        <div>
+            <Link to='/search'>
+                <button className='goToSearch'>{`Search by name ---->`}</button>
+            </Link>
+            <Character characters={data?.characters.results} />
+        </div>
     )
 }

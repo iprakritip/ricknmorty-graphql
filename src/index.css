@@ -19,3 +19,6 @@
   display: flex;
   gap:3rem
 }
+.goToSearch{
+cursor: pointer;
+}
