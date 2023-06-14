@@ -1,11 +1,11 @@
-import { render, screen } from "@testing-library/react"
+import { getByAltText, render, screen } from "@testing-library/react"
 import { BrowserRouter, useNavigate } from "react-router-dom"
 import '@testing-library/jest-dom';
 import Character from "../Character"
 
 
 describe('character component', () => {
-  // test if correct route loads on click
+    // test if correct route loads on click
     const characters = [{
         id: 1,
         name: 'Rick Sanchez',
@@ -20,5 +20,12 @@ describe('character component', () => {
         render(TestComponent);
         expect(screen.getByText('Rick Sanchez')).toBeInTheDocument();
     })
-
+    // passed
+    it('uses correct src', () => {
+        render(TestComponent);
+        const image = screen.getByAltText('Rick Sanchez')
+        expect(image.src).toContain('imageUrl')
+    })
+    //passed
+    
 })

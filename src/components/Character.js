@@ -8,7 +8,7 @@ export default function Character({ characters }) {
                 return (
                     <Link to={`/${character.id}`}>
                         <div key={character.id}>
-                            <img src={character.image} alt="" />
+                            <img src={character.image} alt={character.name} />
                             <h2>{character.name}</h2>
                         </div>
                     </Link>
