@@ -1,8 +1,16 @@
-import { getByAltText, render, screen } from "@testing-library/react"
-import { BrowserRouter, useNavigate } from "react-router-dom"
+import { fireEvent, getByAltText, render, screen } from "@testing-library/react"
+import { BrowserRouter, useNavigate, Router, createMemoryRouter } from "react-router-dom"
+// import {createMemoryHistory} from 'history'
 import '@testing-library/jest-dom';
 import Character from "../Character"
+import userEvent from "@testing-library/user-event";
 
+const mockedUsedNavigate = jest.fn();
+
+jest.mock("react-router-dom", () => ({
+    ...(jest.requireActual("react-router-dom")),
+    useNavigate: () => mockedUsedNavigate
+}));
 
 describe('character component', () => {
     // test if correct route loads on click
@@ -27,5 +35,10 @@ describe('character component', () => {
         expect(image.src).toContain('imageUrl')
     })
     //passed
-    
+
+    test('navigates to correct route', async () => {
+        render(TestComponent)
+        await userEvent.click(screen.getByTestId('test-route'))
+        expect(mockedUsedNavigate).toBeCalled()
+    })
 })
