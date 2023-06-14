@@ -1,4 +1,4 @@
-import { gql, useQuery } from '@apollo/client'
+import { gql, useLazyQuery, useQuery } from '@apollo/client'
 import React from 'react'
 
 const GET_CHARACTER_LOCATIONS = gql`
@@ -14,10 +14,10 @@ query GetLocations($name: String!){
 }
 `
 export const useSearch = (name) => {
-    const { data, loading, error } = useQuery(GET_CHARACTER_LOCATIONS, {
+    const [getLocations, { data, loading, error }] = useLazyQuery(GET_CHARACTER_LOCATIONS, {
         variables: {
             name
         }
     })
-    return { data, loading, error }
+    return { getLocations, data, loading, error }
 }
