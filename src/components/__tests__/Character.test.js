@@ -1,6 +1,5 @@
-import { fireEvent, getByAltText, render, screen } from "@testing-library/react"
-import { BrowserRouter, useNavigate, Router, createMemoryRouter } from "react-router-dom"
-// import {createMemoryHistory} from 'history'
+import { render, screen } from "@testing-library/react"
+import { BrowserRouter } from "react-router-dom"
 import '@testing-library/jest-dom';
 import Character from "../Character"
 import userEvent from "@testing-library/user-event";
@@ -13,7 +12,6 @@ jest.mock("react-router-dom", () => ({
 }));
 
 describe('character component', () => {
-    // test if correct route loads on click
     const character = {
         id: 1,
         name: 'Rick Sanchez',

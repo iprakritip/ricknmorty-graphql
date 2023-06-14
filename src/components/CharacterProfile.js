@@ -1,4 +1,5 @@
 import React from 'react'
+import EpisodeDetails from './EpisodeDetails'
 
 export default function CharacterProfile({ character }) {
     // console.log(character.episode.episode);
@@ -8,11 +9,8 @@ export default function CharacterProfile({ character }) {
             <div className='characterDetails'>
                 <h2>{character.name}</h2>
                 {character.episode.map(episode => {
-                    // console.log(episode.episode);
                     return (
-                        <div key={episode.episode}>
-                            <p><b>{episode.episode}</b> - {episode.name}</p>
-                        </div>
+                        <EpisodeDetails episode={episode.episode} name={episode.name} />
                     )
                 })}
             </div>
