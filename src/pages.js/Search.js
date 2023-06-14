@@ -16,7 +16,7 @@ export default function Search() {
             <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
             <button onClick={() => getLocations()}>Search</button>
             <div>
-                <h2>{name}'s Locations</h2>
+                {data && <h2>{name}'s Locations</h2>}
                 {data && data.characters.results.map(character => {
                     return <Location location={character.location.name} />
                 })}
