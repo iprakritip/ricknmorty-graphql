@@ -14,14 +14,14 @@ jest.mock("react-router-dom", () => ({
 
 describe('character component', () => {
     // test if correct route loads on click
-    const characters = [{
+    const character = {
         id: 1,
         name: 'Rick Sanchez',
         image: 'imageUrl'
-    }]
+    }
     const TestComponent = (
         <BrowserRouter>
-            <Character characters={characters} />
+            <Character character={character} />
         </BrowserRouter>
     )
     it('Renders properly', () => {
