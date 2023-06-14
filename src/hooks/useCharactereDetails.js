@@ -8,6 +8,7 @@ query GetCharacterDetails($id:ID!){
     name
     image
     episode {
+        id
       name
       episode
     }
