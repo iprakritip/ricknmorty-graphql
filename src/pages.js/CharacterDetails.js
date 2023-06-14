@@ -8,7 +8,7 @@ import { useCharacterDetails } from '../hooks/useCharactereDetails'
 export default function CharacterDetails() {
     const { id } = useParams();
     const { data, loading, error } = useCharacterDetails(id)
-    console.log(data);
+    // console.log(data);
 
     if (loading) return <Loading />
     if (error) return <Error />

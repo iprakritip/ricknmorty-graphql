@@ -1,11 +1,12 @@
-import { gql, useLazyQuery, useQuery } from '@apollo/client'
+import { gql, useLazyQuery } from '@apollo/client'
 import React from 'react'
 
 const GET_CHARACTER_LOCATIONS = gql`
 query GetLocations($name: String!){
-    characters(filter: {name: "Morty Smith"}) {
+    characters(filter: 
+    {name: $name
+    }) {
     results {
-      name:$name
       location {
         name
       }
@@ -13,6 +14,7 @@ query GetLocations($name: String!){
   }
 }
 `
+
 export const useSearch = (name) => {
     const [getLocations, { data, loading, error }] = useLazyQuery(GET_CHARACTER_LOCATIONS, {
         variables: {
