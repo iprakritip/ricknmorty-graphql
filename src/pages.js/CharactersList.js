@@ -15,7 +15,11 @@ export default function CharactersList() {
             <Link to='/search'>
                 <button className='goToSearch'>{`Search by name ---->`}</button>
             </Link>
-            <Character characters={data?.characters.results} />
+            <div className='characterList'>
+                {data?.characters.results.map(character => {
+                    return <Character character={character} />
+                })}
+            </div>
         </div>
     )
 }

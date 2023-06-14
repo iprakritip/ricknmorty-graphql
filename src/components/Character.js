@@ -1,20 +1,12 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
-export default function Character({ characters }) {
+export default function Character({ character }) {
     const navigate = useNavigate();
     return (
-        <div className='characterList'>
-            {characters.map(character => {
-                return (
-                    // <Link key={character.id} to={`/${character.id}`}>
-                        <div data-testid='test-route' onClick={()=>navigate(`/${character.id}`)}>
-                            <img src={character.image} alt={character.name} />
-                            <h2>{character.name}</h2>
-                        </div>
-                    // </Link>
-                )
-            })}
+        <div data-testid='test-route' onClick={() => navigate(`/${character.id}`)}>
+            <img src={character.image} alt={character.name} />
+            <h2>{character.name}</h2>
         </div>
     )
 }
