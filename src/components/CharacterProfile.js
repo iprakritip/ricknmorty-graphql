@@ -1,9 +1,9 @@
 import React from 'react'
 import EpisodeDetails from './EpisodeDetails'
 import ProfileInfo from './ProfileInfo'
+import StatusDot from './StatusDot';
 
 export default function CharacterProfile({ character }) {
-    // console.log(character.episode.episode);
     const createdDate = new window.Date(character.created);
     const createdYear = createdDate.getUTCFullYear();
     const createdMonth = createdDate.toLocaleString('default', { month: 'long' });
@@ -15,13 +15,14 @@ export default function CharacterProfile({ character }) {
                 <div className='w-[7rem] h-[7rem] lg:w-[15rem] lg:h-[15rem] rounded-full'>
                     <img className='w-[100%] h-[100%] rounded-full' src={character.image} width={500} height={500} alt="" />
                 </div>
-                <h2 className='text-green-400 text-lg lg:text-2xl flex items-center gap-2'>{character.name}<p className={`h-[0.9rem] w-[0.9rem] mt-1 shadow-md  border  rounded-full ${character.status === 'Alive' ? 'bg-green-400  shadow-green-500 border-green-500' : character.status === 'Dead' ? 'bg-red-500 shadow-red-500 border-red-500' : 'bg-gray-500  shadow-gray-50-500 border-gray-500'}`}></p></h2>
+                <h2 className='text-green-400 text-lg lg:text-2xl flex items-center gap-2'>{character.name}
+                    <StatusDot status={character.status} />
+                </h2>
                 <div className='flex flex-col lg:flex-row lg:gap-[3rem] gap-[1rem]'>
                     <ProfileInfo info={character.gender} infoType='Gender' />
                     <ProfileInfo info={character.species} infoType='Species' />
                     <ProfileInfo info={character.status} infoType='Status' />
                     <ProfileInfo info={createdDay + ' ' + createdMonth + " " + createdYear} infoType='Date Added' />
-
                 </div>
             </div>
             <>
