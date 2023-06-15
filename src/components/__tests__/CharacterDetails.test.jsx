@@ -24,6 +24,10 @@ const mocks = [{
       "id": "7",
       "name": "Abradolf Lincler",
       "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg",
+      "status":'unknown',
+      "gender":"Male",
+      "species":"Human",
+      "created":"2017-11-04T19:59:20.523Z",
       "episode": [
         {
           "id": "10",

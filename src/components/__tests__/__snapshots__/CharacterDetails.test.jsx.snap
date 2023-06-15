@@ -4,32 +4,125 @@ exports[`matches snapshot 1`] = `
 <body>
   <div>
     <div
-      class="characterProfile"
+      class="characterProfile flex flex-col items-center lg:items-start gap-4 lg:gap-10 "
     >
-      <img
-        alt=""
-        height="500"
-        src="https://rickandmortyapi.com/api/character/avatar/7.jpeg"
-        width="500"
-      />
-      <div
-        class="characterDetails"
+      <h3
+        class="text-center w-full lg:text-2xl font-bold"
       >
-        <h2>
+        Character Details
+      </h3>
+      <div
+        class="flex w-full flex-col items-center gap-2 lg:gap-6 bg-slate-200 border rounded-lg py-2"
+      >
+        <div
+          class="w-[7rem] h-[7rem] lg:w-[15rem] lg:h-[15rem] rounded-full"
+        >
+          <img
+            alt=""
+            class="w-[100%] h-[100%] rounded-full"
+            height="500"
+            src="https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+            width="500"
+          />
+        </div>
+        <h2
+          class="text-green-400 text-lg lg:text-2xl"
+        >
           Abradolf Lincler
         </h2>
-        <div>
-          <p>
-            <b>
+        <div
+          class="flex flex-col lg:flex-row lg:gap-[3rem] gap-[1rem]"
+        >
+          <div
+            class="flex flex-col items-center"
+          >
+            <p
+              class="text-xs text-gray-400"
+            >
+              Gender
+            </p>
+            <p
+              class="text-lg font-semi-bold"
+            >
+              Male
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center"
+          >
+            <p
+              class="text-xs text-gray-400"
+            >
+              Species
+            </p>
+            <p
+              class="text-lg font-semi-bold"
+            >
+              Human
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center"
+          >
+            <p
+              class="text-xs text-gray-400"
+            >
+              Status
+            </p>
+            <p
+              class="text-lg font-semi-bold"
+            >
+              unknown
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center"
+          >
+            <p
+              class="text-xs text-gray-400"
+            >
+              Date Added
+            </p>
+            <p
+              class="text-lg font-semi-bold"
+            >
+              2017-11-04T19:59:20.523Z
+            </p>
+          </div>
+        </div>
+      </div>
+      <p
+        class="underline"
+      >
+        Episodes
+      </p>
+      <div
+        class="characterDetails grid lg:grid-cols-2 gap-4 w-full"
+      >
+        <div
+          class="text-center lg:text-start"
+        >
+          <p
+            class="text-sm"
+          >
+            <b
+              class="text-green-400"
+            >
               S01E10
             </b>
              - 
             Close Rick-counters of the Rick Kind
           </p>
         </div>
-        <div>
-          <p>
-            <b>
+        <div
+          class="text-center lg:text-start"
+        >
+          <p
+            class="text-sm"
+          >
+            <b
+              class="text-green-400"
+            >
               S01E11
             </b>
              - 
