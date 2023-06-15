@@ -1,4 +1,5 @@
 import { Link, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 import CharacterDetails from "./pages.js/CharacterDetails";
 import CharactersList from "./pages.js/CharactersList";
 import Search from "./pages.js/Search";
@@ -17,6 +18,7 @@ function App() {
         <Route path='/search' element={<Search />} />
         <Route path='/:id' element={<CharacterDetails />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
