@@ -12,10 +12,10 @@ export default function CharactersList() {
     if (error) return <Error />
     return (
         <div>
-            <Link to='/search'>
-                <button className='goToSearch'>{`Search by name ---->`}</button>
+            <Link className=' my-4 mr-5 lg:mr-[1rem] flex justify-end' to='/search'>
+                <button className='goToSearch px-2 py-1 border border-dotted rounded-lg border-green-500 text-green-500'>{`Search characters' locations ->`}</button>
             </Link>
-            <div className='characterList'>
+            <div className='characterList flex flex-wrap justify-center gap-8'>
                 {data?.characters.results.map(character => {
                     return <Character character={character} />
                 })}
