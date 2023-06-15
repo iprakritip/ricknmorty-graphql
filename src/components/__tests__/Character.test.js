@@ -8,7 +8,8 @@ const mockedUsedNavigate = jest.fn();
 
 jest.mock("react-router-dom", () => ({
     ...(jest.requireActual("react-router-dom")),
-    useNavigate: () => mockedUsedNavigate
+    useNavigate: () => mockedUsedNavigate,
+    useParams:()=>({id:1})
 }));
 
 describe('character component', () => {

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="characterProfile"
+    >
+      <img
+        alt=""
+        height="500"
+        src="https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+        width="500"
+      />
+      <div
+        class="characterDetails"
+      >
+        <h2>
+          Abradolf Lincler
+        </h2>
+        <div>
+          <p>
+            <b>
+              S01E10
+            </b>
+             - 
+            Close Rick-counters of the Rick Kind
+          </p>
+        </div>
+        <div>
+          <p>
+            <b>
+              S01E11
+            </b>
+             - 
+            Ricksy Business
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
