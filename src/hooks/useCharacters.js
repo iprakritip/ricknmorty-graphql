@@ -9,6 +9,7 @@ query getCharacters{
             id
             name
             image
+            species
         }
     }
 }
