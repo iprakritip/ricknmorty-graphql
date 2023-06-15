@@ -16,7 +16,6 @@ export default function Search() {
     if (loading) return <Loading />
     if (error) return <Error />
 
-
     return (
         <div className=' bg-slate-100 flex flex-col gap-10 mt-[5rem]'>
             <div className='flex flex-col gap-6 items-center w-full'>
