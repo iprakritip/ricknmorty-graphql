@@ -4,7 +4,7 @@ exports[`matches snapshot 1`] = `
 <body>
   <div>
     <div
-      class="characterProfile flex flex-col items-center lg:items-start gap-4 lg:gap-10 "
+      class="characterProfile flex flex-col items-center lg:items-start gap-4 lg:gap-10 bg-slate-100"
     >
       <h3
         class="text-center w-full lg:text-2xl font-bold"
@@ -86,11 +86,33 @@ exports[`matches snapshot 1`] = `
             <p
               class="text-lg font-semi-bold"
             >
-              2017-11-04T19:59:20.523Z
+              6 November 2017
             </p>
           </div>
         </div>
       </div>
+      <p
+        class="flex gap-2 "
+      >
+        Last seen at: 
+        <p
+          class="text-green-500"
+        >
+          Testicle Monster Dimension
+        </p>
+         
+      </p>
+      <p
+        class="flex gap-2 "
+      >
+        Place of origin: 
+        <p
+          class="text-green-500"
+        >
+          Earth (Replacement Dimension)
+        </p>
+         
+      </p>
       <p
         class="underline"
       >
@@ -111,7 +133,6 @@ exports[`matches snapshot 1`] = `
               S01E10
             </b>
              - 
-            Close Rick-counters of the Rick Kind
           </p>
         </div>
         <div
@@ -126,7 +147,6 @@ exports[`matches snapshot 1`] = `
               S01E11
             </b>
              - 
-            Ricksy Business
           </p>
         </div>
       </div>

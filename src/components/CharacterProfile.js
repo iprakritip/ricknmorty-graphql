@@ -25,6 +25,10 @@ export default function CharacterProfile({ character }) {
                 </div>
             </div>
             <>
+                <p className='flex gap-2 '>Last seen at: <p className='text-green-500'>{character.location.name}</p> </p>
+                <p className='flex gap-2 ' >Place of origin: <p className='text-green-500'>{character.origin.name}</p> </p>
+            </>
+            <>
                 <p className='underline'>Episodes</p>
                 <div className='characterDetails grid lg:grid-cols-2 gap-4 w-full'>
 

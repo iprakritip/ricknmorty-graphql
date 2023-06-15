@@ -24,23 +24,29 @@ const mocks = [{
       "id": "7",
       "name": "Abradolf Lincler",
       "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg",
-      "status":'unknown',
-      "gender":"Male",
-      "species":"Human",
-      "created":"2017-11-04T19:59:20.523Z",
+      "status": "unknown",
+      "gender": "Male",
+      "species": "Human",
+      "created": "2017-11-04T19:59:20.523Z",
       "episode": [
         {
           "id": "10",
-          "name": "Close Rick-counters of the Rick Kind",
           "episode": "S01E10"
         },
         {
           "id": "11",
-          "name": "Ricksy Business",
           "episode": "S01E11"
         }
-      ]
-    }
+      ],
+      "origin": {
+        "id": "20",
+        "name": "Earth (Replacement Dimension)"
+      },
+      "location": {
+        "id": "21",
+        "name": "Testicle Monster Dimension"
+      }
+      }
   }}
 }]
 const TestComponent=(<MockedProvider mocks={mocks} >
