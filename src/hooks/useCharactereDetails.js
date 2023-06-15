@@ -7,6 +7,10 @@ query GetCharacterDetails($id:ID!){
     id
     name
     image
+    status
+    gender
+    species
+    created
     episode {
         id
       name
