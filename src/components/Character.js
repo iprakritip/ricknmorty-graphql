@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Character({ character }) {
     const navigate = useNavigate();
     return (
-        <div className='flex flex-col hover:shadow-2xl cursor-pointer' data-testid='test-route' onClick={() => navigate(`/${character.id}`)}>
+        <div className='flex flex-col shadow hover:shadow-2xl transition-shadow duration-300 ease-in-out  cursor-pointer' data-testid='test-route' onClick={() => navigate(`/${character.id}`)}>
             <div className='m-auto lg:w-[20rem] lg:h-[20rem] bg-white p-4 lg:p-2'>
                 <img className='w-[100%] h-[100%]' src={character.image} alt={character.name} />
             </div>
