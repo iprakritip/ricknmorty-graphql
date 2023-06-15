@@ -9,14 +9,15 @@ const mockedUsedNavigate = jest.fn();
 jest.mock("react-router-dom", () => ({
     ...(jest.requireActual("react-router-dom")),
     useNavigate: () => mockedUsedNavigate,
-    useParams:()=>({id:1})
+    useParams: () => ({ id: 1 })
 }));
 
 describe('character component', () => {
     const character = {
         id: 1,
         name: 'Rick Sanchez',
-        image: 'imageUrl'
+        image: 'imageUrl',
+        species: 'Human'
     }
     const TestComponent = (
         <BrowserRouter>
@@ -25,7 +26,7 @@ describe('character component', () => {
     )
     it('Renders properly', () => {
         render(TestComponent);
-        expect(screen.getByText('Rick Sanchez')).toBeInTheDocument();
+        expect(screen.getByText('RICK SANCHEZ')).toBeInTheDocument();
     })
     // passed
     it('uses correct src', () => {
