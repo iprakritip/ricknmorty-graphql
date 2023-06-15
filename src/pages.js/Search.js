@@ -17,7 +17,7 @@ export default function Search() {
     if (error) return <Error />
 
     return (
-        <div className=' bg-slate-100 flex flex-col gap-10 mt-[5rem]'>
+        <div className=' bg-slate-100 flex h-[68vh] flex-col gap-10 mt-[5rem]'>
             <div className='flex flex-col gap-6 items-center w-full'>
                 <div className='flex flex-col '>
                     <label className='text-xs text-center ' htmlFor="locationInput">Search for a character's locations</label>
@@ -25,7 +25,7 @@ export default function Search() {
                 </div>
                 <button disabled={buttonDisability} className={`${buttonDisability?'bg-green-300':'bg-green-500'} px-4 py-1 border rounded-lg`} onClick={() => getLocations()}>Search</button>
             </div>
-            <div>
+            <div className='bg-slate-100'>
                 {(name !== '' && data) && <h2 className='font-bold text-green-500'>{name}'s Locations</h2>}
                 {(name !== '' && data) && data.characters.results.map(character => {
                     return <Location location={character.location.name} />

@@ -5,7 +5,7 @@ import ProfileInfo from './ProfileInfo'
 export default function CharacterProfile({ character }) {
     // console.log(character.episode.episode);
     return (
-        <div className='characterProfile flex flex-col items-center lg:items-start gap-4 lg:gap-10 '>
+        <div className='characterProfile flex flex-col items-center lg:items-start gap-4 lg:gap-10 bg-slate-100'>
             <h3 className='text-center w-full lg:text-2xl font-bold'>Character Details</h3>
             <div className='flex w-full flex-col items-center gap-2 lg:gap-6 bg-slate-200 border rounded-lg py-2'>
                 <div className='w-[7rem] h-[7rem] lg:w-[15rem] lg:h-[15rem] rounded-full'>

@@ -15,7 +15,7 @@ export default function CharactersList() {
             <Link className=' my-4 mr-5 lg:mr-[2rem] flex justify-end' to='/search'>
                 <button className='goToSearch px-2 py-1 border border-dotted rounded-lg border-green-500 text-green-500'>{`Search Locations`}</button>
             </Link>
-            <div className='characterList flex flex-wrap justify-center gap-8'>
+            <div className='characterList flex flex-wrap justify-center gap-8 bg-slate-100'>
                 {data?.characters.results.map(character => {
                     return <Character character={character} />
                 })}
