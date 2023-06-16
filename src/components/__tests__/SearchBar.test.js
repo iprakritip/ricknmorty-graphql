@@ -25,4 +25,6 @@ describe('search bar component', () => {
         await userEvent.type(screen.getByRole('textbox'),'Rick')
         expect(mockedOnChange).toBeCalled();
     })
+
+    //all passed
 })
