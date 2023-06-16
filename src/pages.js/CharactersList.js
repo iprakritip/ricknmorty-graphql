@@ -9,10 +9,13 @@ export default function CharactersList() {
     const { error, loading, data } = useCharacters();
 
     const [name, setName] = useState('');
+
     const filtered = name && data?.characters.results.filter((character) => {
         return character.name.toLowerCase().includes((name.toLowerCase()))
     })
-    // console.log(data?.characters.results);
+
+    console.log(filtered);
+    console.log(filtered.length);
     return (
         <div className="flex flex-col gap-6">
             <Link className=' my-4 mr-5 lg:mr-[2rem] flex justify-end' to='/search'>
@@ -27,10 +30,13 @@ export default function CharactersList() {
                             return <Character character={character} />
                         })}
                     </div>
-                    : <div>{filtered && filtered.map(character => {
-                        // console.log(character);
-                        return <Character character={character} />
-                    })}</div>
+                    : <div className='characterList flex flex-wrap justify-center gap-8 bg-slate-100 h-screen'>
+                        {filtered.length ? filtered.map(character => {
+                            console.log('greater than zero');
+                            return (
+                                <Character character={character} />
+                            )
+                        }) : <h3>No character with such name.</h3>}</div>
             }
 
         </div>

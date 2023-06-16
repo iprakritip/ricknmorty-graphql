@@ -3,151 +3,164 @@
 exports[`matches snapshot 1`] = `
 <body>
   <div>
-    <div
-      class="characterProfile flex flex-col items-center lg:items-start gap-4 lg:gap-10 bg-slate-100"
-    >
-      <h3
-        class="text-center w-full lg:text-2xl font-bold"
-      >
-        Character Details
-      </h3>
+    <div>
       <div
-        class="flex w-full flex-col items-center gap-2 lg:gap-6 bg-slate-200 border rounded-lg py-2"
+        class="characterProfile h-full flex flex-col items-center lg:items-start gap-4 lg:gap-10 bg-slate-100"
       >
-        <div
-          class="w-[7rem] h-[7rem] lg:w-[15rem] lg:h-[15rem] rounded-full"
+        <h3
+          class="text-center w-full lg:text-2xl font-bold"
         >
-          <img
-            alt=""
-            class="w-[100%] h-[100%] rounded-full"
-            height="500"
-            src="https://rickandmortyapi.com/api/character/avatar/7.jpeg"
-            width="500"
-          />
+          Character Details
+        </h3>
+        <div
+          class="flex w-full flex-col items-center gap-2 lg:gap-6 bg-slate-200 border rounded-lg py-2"
+        >
+          <div
+            class="w-[7rem] h-[7rem] lg:w-[15rem] lg:h-[15rem] rounded-full"
+          >
+            <img
+              alt=""
+              class="w-[100%] h-[100%] rounded-full"
+              height="500"
+              src="https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+              width="500"
+            />
+          </div>
+          <h2
+            class=" text-lg lg:text-2xl flex text-center gap-2 relative"
+          >
+            Abradolf Lincler
+            <div
+              class="absolute group right-[-1.5rem] top-[0.3rem]"
+            >
+              <p
+                class="absolute hidden  text-xs bottom-4 left-4 group-hover:block px-1 border border-gray-500  text-gray-500 rounded"
+              >
+                unknown
+              </p>
+              <p
+                class="h-[0.9rem] w-[0.9rem] mt-1 shadow-md   border cursor-pointer  rounded-full bg-gray-500  shadow-gray-50-500 border-gray-500"
+              />
+            </div>
+          </h2>
+          <div
+            class="flex flex-col lg:flex-row lg:gap-[3rem] gap-[1rem]"
+          >
+            <div
+              class="flex flex-col items-center"
+            >
+              <p
+                class="text-xs text-gray-400"
+              >
+                Gender
+              </p>
+              <p
+                class="text-lg font-semi-bold"
+              >
+                Male
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-center"
+            >
+              <p
+                class="text-xs text-gray-400"
+              >
+                Species
+              </p>
+              <p
+                class="text-lg font-semi-bold"
+              >
+                Human
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-center"
+            >
+              <p
+                class="text-xs text-gray-400"
+              >
+                Date Added
+              </p>
+              <p
+                class="text-lg font-semi-bold"
+              >
+                05 November 2017
+              </p>
+            </div>
+          </div>
         </div>
-        <h2
-          class="text-green-400 text-lg lg:text-2xl"
-        >
-          Abradolf Lincler
-        </h2>
         <div
-          class="flex flex-col lg:flex-row lg:gap-[3rem] gap-[1rem]"
-        >
-          <div
-            class="flex flex-col items-center"
-          >
-            <p
-              class="text-xs text-gray-400"
-            >
-              Gender
-            </p>
-            <p
-              class="text-lg font-semi-bold"
-            >
-              Male
-            </p>
-          </div>
-          <div
-            class="flex flex-col items-center"
-          >
-            <p
-              class="text-xs text-gray-400"
-            >
-              Species
-            </p>
-            <p
-              class="text-lg font-semi-bold"
-            >
-              Human
-            </p>
-          </div>
-          <div
-            class="flex flex-col items-center"
-          >
-            <p
-              class="text-xs text-gray-400"
-            >
-              Status
-            </p>
-            <p
-              class="text-lg font-semi-bold"
-            >
-              unknown
-            </p>
-          </div>
-          <div
-            class="flex flex-col items-center"
-          >
-            <p
-              class="text-xs text-gray-400"
-            >
-              Date Added
-            </p>
-            <p
-              class="text-lg font-semi-bold"
-            >
-              6 November 2017
-            </p>
-          </div>
-        </div>
-      </div>
-      <p
-        class="flex gap-2 "
-      >
-        Last seen at: 
-        <p
-          class="text-green-500"
-        >
-          Testicle Monster Dimension
-        </p>
-         
-      </p>
-      <p
-        class="flex gap-2 "
-      >
-        Place of origin: 
-        <p
-          class="text-green-500"
-        >
-          Earth (Replacement Dimension)
-        </p>
-         
-      </p>
-      <p
-        class="underline"
-      >
-        Episodes
-      </p>
-      <div
-        class="characterDetails grid lg:grid-cols-2 gap-4 w-full"
-      >
-        <div
-          class="text-center lg:text-start"
+          class="flex w-full justify-between px-4"
         >
           <p
-            class="text-sm"
+            class="flex gap-2 border border-dotted px-2 py-1 border-green-500 border-l-0"
           >
-            <b
-              class="text-green-400"
+            Last identified location: 
+            <p
+              class="text-green-500"
             >
-              S01E10
-            </b>
-             - 
+              Testicle Monster Dimension
+            </p>
+             
+          </p>
+          <p
+            class="text-xs text-green-500 mt-1"
+          >
+            ...........................................................................
+          </p>
+          <p
+            class="flex gap-2 border border-dotted px-2 py-1 border-green-500 border-r-0"
+          >
+            Place of origin: 
+            <p
+              class="text-green-500"
+            >
+              Earth (Replacement Dimension)
+            </p>
+             
           </p>
         </div>
         <div
-          class="text-center lg:text-start"
+          class="w-full"
         >
           <p
-            class="text-sm"
+            class="underline"
           >
-            <b
-              class="text-green-400"
-            >
-              S01E11
-            </b>
-             - 
+            Episodes
           </p>
+          <div
+            class="characterDetails grid lg:grid-cols-2 gap-4 w-full"
+          >
+            <div
+              class="text-center lg:text-start"
+            >
+              <p
+                class="text-sm flex"
+              >
+                <b
+                  class="text-green-400"
+                >
+                  S01E10
+                </b>
+                 - 
+              </p>
+            </div>
+            <div
+              class="text-center lg:text-start"
+            >
+              <p
+                class="text-sm flex"
+              >
+                <b
+                  class="text-green-400"
+                >
+                  S01E11
+                </b>
+                 - 
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
