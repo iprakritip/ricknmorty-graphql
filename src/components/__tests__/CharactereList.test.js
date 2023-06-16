@@ -1,7 +1,7 @@
 import { MockedProvider } from "@apollo/client/testing"
 import '@testing-library/jest-dom';
 import CharactersList from "../../pages.js/CharactersList"
-import { render, screen } from "@testing-library/react";
+import { findByText, render, screen } from "@testing-library/react";
 import { GET_CHARACTERS } from "../../hooks/useCharacters";
 import { BrowserRouter } from "react-router-dom";
 
@@ -149,6 +149,12 @@ const TestComponent = (
 test('should render characters list', async () => {
     render(TestComponent)
     expect(await screen.findByRole('button')).toBeInTheDocument();
+})
+// passed
+
+it('should render character card',async()=>{
+    render(TestComponent)
+    expect(await screen.findByText('RICK SANCHEZ')).toBeInTheDocument()
 })
 
 // passed

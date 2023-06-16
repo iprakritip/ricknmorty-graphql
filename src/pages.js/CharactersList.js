@@ -28,7 +28,7 @@ export default function CharactersList() {
                     </div>
                     : <div className='characterList flex flex-wrap justify-center gap-8 bg-slate-100 h-screen'>
                         {filtered.length ? filtered.map(character => {
-                            console.log('greater than zero');
+                            // console.log('greater than zero');
                             return (
                                 <Character character={character} />
                             )
