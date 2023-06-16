@@ -1,9 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
-import Error from '../components/Error';
 import Fallback from '../components/Fallback';
-import Loading from '../components/Loading';
 import Location from '../components/Location';
 import { useSearch } from '../hooks/useSearch';
 
@@ -15,11 +13,7 @@ export default function Search() {
     useEffect(() => {
         name !== '' ? setButtonDisability(false) : setButtonDisability(true)
     }, [name])
-
-    if (loading) return <Loading />
-    if (error) return <Error />
-
-
+    console.log(name, data);
     return (
         <div className=' bg-slate-100 flex h-[68vh] flex-col gap-10 mt-[5rem]'>
             <div className='flex flex-col gap-6 items-center w-full'>
@@ -37,7 +31,7 @@ export default function Search() {
                 }}>Search</button>
             </div>
             <div className='bg-slate-100'>
-                {filteredBy && <h2 className='font-bold text-green-500'>{data.character > 0 ? `${filteredBy}'s Locations` : `There is no character by the name '${filteredBy}'. `}</h2>}
+                {filteredBy && <h2 className='font-bold text-green-500'>{data ? `${filteredBy}'s Locations` : `There is no character by the name '${filteredBy}'. `}</h2>}
                 {data?.characters?.results.map(character => {
                     return <div>{data
                         ? <Location location={character.location.name} />
