@@ -9,9 +9,6 @@ export default function CharacterProfile({ character }) {
         month: 'long',
         year: 'numeric'
     });
-    // const createdYear = createdDate.getUTCFullYear();
-    // const createdMonth = createdDate.toLocaleString('default', { month: 'long' });
-    // const createdDay = createdDate.getUTCDay();
     return (
         <div className='characterProfile flex flex-col items-center lg:items-start gap-4 lg:gap-10 bg-slate-100'>
             <h3 className='text-center w-full lg:text-2xl font-bold'>Character Details</h3>
@@ -19,13 +16,12 @@ export default function CharacterProfile({ character }) {
                 <div className='w-[7rem] h-[7rem] lg:w-[15rem] lg:h-[15rem] rounded-full'>
                     <img className='w-[100%] h-[100%] rounded-full' src={character.image} width={500} height={500} alt="" />
                 </div>
-                <h2 className='text-green-400 text-lg lg:text-2xl flex items-center gap-2'>{character.name}
+                <h2 className='text-green-400 text-lg lg:text-2xl flex text-center gap-2 relative'>{character.name}
                     <StatusDot status={character.status} />
                 </h2>
                 <div className='flex flex-col lg:flex-row lg:gap-[3rem] gap-[1rem]'>
                     <ProfileInfo info={character.gender} infoType='Gender' />
                     <ProfileInfo info={character.species} infoType='Species' />
-                    <ProfileInfo info={character.status} infoType='Status' />
                     <ProfileInfo info={createdDate} infoType='Date Added' />
                 </div>
             </div>
