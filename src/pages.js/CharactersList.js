@@ -7,15 +7,11 @@ import SearchBar from '../components/SearchBar'
 
 export default function CharactersList() {
     const { error, loading, data } = useCharacters();
-
     const [name, setName] = useState('');
-
     const filtered = name && data?.characters.results.filter((character) => {
         return character.name.toLowerCase().includes((name.toLowerCase()))
     })
 
-    console.log(filtered);
-    console.log(filtered.length);
     return (
         <div className="flex flex-col gap-6">
             <Link className=' my-4 mr-5 lg:mr-[2rem] flex justify-end' to='/search'>
@@ -36,7 +32,7 @@ export default function CharactersList() {
                             return (
                                 <Character character={character} />
                             )
-                        }) : <h3>No character with such name.</h3>}</div>
+                        }) : <h3 className='text-gray-500 text-sm'>No character with such name.</h3>}</div>
             }
 
         </div>
