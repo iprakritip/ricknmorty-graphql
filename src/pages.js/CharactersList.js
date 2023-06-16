@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Character from '../components/Character';
-import Error from '../components/Error';
 import Fallback from '../components/Fallback';
-import Loading from '../components/Loading';
 import { useCharacters } from '../hooks/useCharacters';
 
 export default function CharactersList() {
