@@ -4,10 +4,14 @@ import ProfileInfo from './ProfileInfo'
 import StatusDot from './StatusDot';
 
 export default function CharacterProfile({ character }) {
-    const createdDate = new window.Date(character.created);
-    const createdYear = createdDate.getUTCFullYear();
-    const createdMonth = createdDate.toLocaleString('default', { month: 'long' });
-    const createdDay = createdDate.getUTCDay();
+    const createdDate = new window.Date(character.created).toLocaleString('en-GB', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+    });
+    // const createdYear = createdDate.getUTCFullYear();
+    // const createdMonth = createdDate.toLocaleString('default', { month: 'long' });
+    // const createdDay = createdDate.getUTCDay();
     return (
         <div className='characterProfile flex flex-col items-center lg:items-start gap-4 lg:gap-10 bg-slate-100'>
             <h3 className='text-center w-full lg:text-2xl font-bold'>Character Details</h3>
@@ -22,7 +26,7 @@ export default function CharacterProfile({ character }) {
                     <ProfileInfo info={character.gender} infoType='Gender' />
                     <ProfileInfo info={character.species} infoType='Species' />
                     <ProfileInfo info={character.status} infoType='Status' />
-                    <ProfileInfo info={createdDay + ' ' + createdMonth + " " + createdYear} infoType='Date Added' />
+                    <ProfileInfo info={createdDate} infoType='Date Added' />
                 </div>
             </div>
             <>

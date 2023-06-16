@@ -15,11 +15,7 @@ query GetLocations($name: String!){
 }
 `
 
-export const useSearch = (name) => {
-    const [getLocations, { data, loading, error }] = useLazyQuery(GET_CHARACTER_LOCATIONS, {
-        variables: {
-            name
-        }
-    })
-    return { getLocations, data, loading, error }
+export const useSearch = () => {
+  const [getLocations, { data, loading, error }] = useLazyQuery(GET_CHARACTER_LOCATIONS)
+  return { getLocations, data, loading, error }
 }
